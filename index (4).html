@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial & Error Robotics</title>
+    <!-- Add Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #000; /* Default text color */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* Header with White Box */
+        header {
+            background: white; /* White background for the header */
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure header stays on top */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            display: block;
+        }
+
+        .heading-small {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            margin: 0;
+            font-weight: bold;
+            color: black;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: gray;
+            text-decoration: underline;
+        }
+
+        /* Hero Section with Scrolling Text Effect */
+        .hero {
+            height: 100vh;
+            background: url('robotics_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .scale-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3vw;
+            text-align: center;
+            white-space: nowrap;
+            transition: 0.3s linear;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            color: white;
+            z-index: 10; /* Ensure text stays above the background */
+        }
+
+        /* Content Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Ensure content stays above the scaling text */
+            background: white; /* White background for content sections */
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #222;
+            color: #fff;
+            position: relative;
+            z-index: 1; /* Ensure footer stays above the scaling text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="website-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo.png" alt="Trial & Error Robotics Logo" height="40" width="40">
+            </div>
+            <h2 class="heading-small">Trial & Error</h2>
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Scrolling Text Effect -->
+        <section id="home" class="hero">
+            <div class="scale-text">innovate. iterate. inspire.</div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Explore our latest robotics projects.</p>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a team of innovators dedicated to pushing the boundaries of robotics.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us for collaborations or inquiries.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Trial & Error Robotics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scrolling text effect
+        window.addEventListener('scroll', () => {
+            const text = document.querySelector('.scale-text');
+            const scrollPosition = window.scrollY;
+            
+            // Adjust scale factor here (0.03 = scaling speed)
+            const scale = 1 + scrollPosition * 0.03;
+            
+            // Apply the scale transformation
+            text.style.transform = `translate(-50%, -50%) scale(${Math.min(scale, 8)})`;
+        });
+    </script>
+</body>
+</html>
