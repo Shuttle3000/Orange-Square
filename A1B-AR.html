@@ -39,11 +39,11 @@
         }
         .product-image {
             width: 50%;
+            max-width: 300px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
             margin-bottom: 20px;
-            position: relative;
         }
         .features-grid {
             display: grid;
@@ -52,12 +52,6 @@
             margin-top: 20px;
             width: 100%;
             justify-content: center;
-            position: relative;
-        }
-        .feature-container {
-            display: flex;
-            justify-content: center;
-            position: relative;
         }
         .feature {
             display: flex;
@@ -70,7 +64,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 10px;
             background-color: #fff;
-            position: relative;
+            width: 100%;
+            max-width: 150px;
         }
         .feature:hover {
             transform: scale(1.05);
@@ -135,49 +130,37 @@
         <h2>Revolutionizing Prosthetics with Advanced Technology</h2>
     </div>
     <div class="main-content">
-        <img class="product-image" src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="M1 Bionic Arm" onclick="redirectTo('https://www.m1bionicarm.com')">
+        <img class="product-image" src="https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="M1 Bionic Arm" onclick="redirectTo('https://www.m1bionicarm.com')">
         <div class="features-grid">
-            <div class="feature-container">
+            <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/ai-powered-control')">
                 <div class="line" id="line-1"></div>
-                <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/ai-powered-control')">
-                    <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="AI-Powered Control">
-                    <div>AI-Powered Control</div>
-                </div>
+                <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="AI-Powered Control">
+                <div>AI-Powered Control</div>
             </div>
-            <div class="feature-container">
+            <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/lightweight-design')">
                 <div class="line" id="line-2"></div>
-                <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/lightweight-design')">
-                    <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lightweight Design">
-                    <div>Lightweight Design</div>
-                </div>
+                <img src="https://images.pexels.com/photos/6153738/pexels-photo-6153738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Lightweight Design">
+                <div>Dexhand</div>
             </div>
-            <div class="feature-container">
+            <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/durable-materials')">
                 <div class="line" id="line-3"></div>
-                <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/durable-materials')">
-                    <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Durable Materials">
-                    <div>Durable Materials</div>
-                </div>
+                <img src="https://images.pexels.com/photos/6153346/pexels-photo-6153346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Durable Materials">
+                <div>Artificial Silicone Skin</div>
             </div>
-            <div class="feature-container">
+            <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/wireless-connectivity')">
                 <div class="line" id="line-4"></div>
-                <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/wireless-connectivity')">
-                    <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wireless Connectivity">
-                    <div>Wireless Connectivity</div>
-                </div>
+                <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wireless Connectivity">
+                <div>Wireless Connectivity</div>
             </div>
-            <div class="feature-container">
+            <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/customizable-grips')">
                 <div class="line" id="line-5"></div>
-                <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/customizable-grips')">
-                    <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customizable Grips">
-                    <div>Customizable Grips</div>
-                </div>
+                <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Customizable Grips">
+                <div>Customizable Grips</div>
             </div>
-            <div class="feature-container">
+            <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/long-battery-life')">
                 <div class="line" id="line-6"></div>
-                <div class="feature" onclick="redirectTo('https://www.m1bionicarm.com/long-battery-life')">
-                    <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Long Battery Life">
-                    <div>Long Battery Life</div>
-                </div>
+                <img src="https://images.pexels.com/photos/8438980/pexels-photo-8438980.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Long Battery Life">
+                <div>Long Battery Life</div>
             </div>
         </div>
     </div>
@@ -203,11 +186,10 @@
         function positionLines() {
             const productImage = document.querySelector('.product-image');
             const productRect = productImage.getBoundingClientRect();
-            const featureContainers = document.querySelectorAll('.feature-container');
+            const features = document.querySelectorAll('.feature');
             
-            featureContainers.forEach((container, index) => {
-                const line = container.querySelector('.line');
-                const feature = container.querySelector('.feature');
+            features.forEach((feature, index) => {
+                const line = feature.querySelector('.line');
                 const featureRect = feature.getBoundingClientRect();
                 
                 const startX = productRect.left + productRect.width / 2;
