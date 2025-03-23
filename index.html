@@ -23,18 +23,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem;
+            padding: 1rem 2rem;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000; /* Ensure header stays on top */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            box-sizing: border-box; /* Ensure padding is included in the width */
         }
 
         .header-content {
             display: flex;
             align-items: center;
             gap: 10px;
+            
         }
 
         .logo-container img {
@@ -65,6 +67,7 @@
             color: black;
             text-decoration: none;
             font-weight: bold;
+            white-space: nowrap; /* Prevent text from wrapping */
         }
 
         nav a:hover {
